@@ -17,7 +17,7 @@
       <div class="encrypt-container">
         <div class="text-to-encrypt">
           <textarea
-            class="message"
+            class="input-message"
             placeholder="Ingrese el texto aquí"
           ></textarea>
           <div class="buttoms">
@@ -28,8 +28,18 @@
       </div>
 
       <div class="encrypted-message">
-
-      </dir>
+        <div class="output-message">
+            <div class="empty-message">
+                <img src="media/no-message-img.svg">
+                <h3>Ningún mensaje fue encontrado.</h3>
+                <p>Ingresa el mensaje que deseas encriptar o desencriptar</p>
+            </div>
+            <div class="encrypted">
+                <textarea class="encrypted-result"></textarea>
+            </div>
+            <button class="btn-copy">Copiar</button>
+        </div>
+      </div>
     </main>
   </body>
 </html>
