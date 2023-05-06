@@ -4,43 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Encriptador Challenge</title>
   </head>
+
   <body>
     <div class="principal-container">
       <div class="logo-container">
         <img src="media/alura-logo.svg" />
       </div>
-      <div class="add-text-container">
-        <p>Ingresa el texto aquí</p>
+      <div class="encrypt-container">
+        <div class="text-to-encrypt-container">
+          <textarea
+            class="add-message"
+            placeholder="Ingresa el texto aquí"
+          ></textarea>
 
-        <div class="info-container">
-          <p>Solo letras minúsculas y sin acento</p>
+          <div class="input-buttons-container">
+            <small>
+              <img src="media/exclamation.svg">
+            Solo letras minúsculas y sin acento
+            </small>
+            
+            <div class="buttons">
+              <button class="encrypt-btn">
+                <span for="encrypt-btn" class="text-button">Encriptar</span>
+              </button>
+              <button class="unencrypt-btn">
+                <span for="unencrypt-btn" class="text-button">Desencriptar</span>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="input-buttons-container">
-          <button class="encrypt-btn">
-            <label for="encrypt-btn">Encriptar</label>
-          </button>
-          <button class="unencrypt-btn">
-            <label for="unencrypt-btn">Desencriptar</label>
-          </button>
-        </div>
+          
+
+        
       </div>
+
       <div class="encrypt-result-container">
-        <img src="media/no-message-img.svg">
+        <img src="media/no-message-img.svg" />
 
-        <textarea class="result">
-
-        </textarea>
+        <textarea class="result"> </textarea>
         <h2>Ningún mensaje fue encontrado</h2>
         <p>Ingresa el texto que deseas encriptar o desencriptar</p>
 
-          <button class="copy-btn">
-            <label for="copy-btn">Copiar</label>
-          </button>
+        <button class="copy-btn">
+          <label for="copy-btn">Copiar</label>
+        </button>
       </div>
     </div>
   </body>
