@@ -155,3 +155,216 @@ button .text-button {
 .copy-btn {
   margin-bottom: 2.3rem;
 }
+
+/* Responsive*/
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+
+  .principal-container {
+    flex-direction: column;
+  }
+
+  .logo-container {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .encrypt-container {
+    width: 100%;
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .encrypt-container .text-to-encrypt-container {
+    width: 90%;
+  }
+
+  .text-to-encrypt-container textarea {
+    font-size: 1rem;
+    height: 20vh;
+    margin-bottom: 0.5rem;
+  }
+
+  .text-to-encrypt-container .buttons {
+    flex-direction: row;
+    padding-top: 2rem;
+    margin-top: 1rem;
+  }
+
+  .input-buttons-container small {
+    font-size: 0.6rem;
+    gap: 0.3rem;
+  }
+
+  .input-buttons-container img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .encrypt-container .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  button {
+    height: 5vh;
+    border-radius: 0.5rem;
+  }
+
+  /* RESULDATO*/
+
+  .main-result-container {
+    width: 100%;
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-result-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .main-result-container .encrypt-initial-container {
+    height: 50vh;
+    width: 90%;
+    border-radius: 1rem;
+  }
+
+  .main-result-container .encrypt-initial-container .no-encrypted-message {
+    font-size: 0.8rem;
+  }
+  .no-encrypted-message img{
+    width: 60%;
+  }
+
+  .main-result-container .encrypt-initial-container .encrypted-message {
+    display: none;
+  }
+
+  .main-result-container .encrypt-initial-container .encrypted-message textarea {
+    font-size: 1rem;
+    margin: 0.5rem, auto;
+    height: 80%;
+    padding: 0.5rem;
+  }
+
+  .copy-btn {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Para tablets */
+
+/* For screens with a maximum width of 768px (tablet screens) */
+@media only screen and (max-width: 768px) {
+  .principal-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo-container {
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .encrypt-container {
+    width: 100%;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .encrypt-container .text-to-encrypt-container {
+    width: 90%;
+  }
+  
+  .text-to-encrypt-container textarea {
+    font-size: 1.2rem;
+    height: 20vh;
+  }
+  
+  .main-result-container {
+    width: 90%;
+    margin-top: 2rem;
+  }
+  
+  .main-result-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .main-result-container .encrypt-initial-container {
+    height: 40vh;
+  }
+  
+  .main-result-container .encrypt-initial-container .encrypted-message textarea {
+    font-size: 1.2rem;
+  }
+  
+  .copy-btn {
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* Posicion horizontal*/
+/* For screens with a maximum width of 768px (tablet screens) */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .principal-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo-container {
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .encrypt-container {
+    width: 100%;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .encrypt-container .text-to-encrypt-container {
+    width: 90%;
+  }
+  
+  .text-to-encrypt-container textarea {
+    font-size: 1.2rem;
+    height: 20vh;
+  }
+  
+  .main-result-container {
+    width: 90%;
+    margin-top: 2rem;
+  }
+  
+  .main-result-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .main-result-container .encrypt-initial-container {
+    height: 40vh;
+  }
+
+  .no-encrypted-message{
+    text-align: center;
+  }
+  
+  .main-result-container .encrypt-initial-container .encrypted-message textarea {
+    font-size: 1.2rem;
+  }
+  
+  .copy-btn {
+    margin-bottom: 1rem;
+  }
+}
