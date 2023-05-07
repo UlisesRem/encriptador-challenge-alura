@@ -5,7 +5,6 @@ body {
 
 .principal-container {
   display: flex;
-  background-color: tomato;
   min-height: 100vh;
 }
 
@@ -16,7 +15,6 @@ body {
 }
 
 .encrypt-container {
-  background-color: yellow;
   width: 60vw;
   padding-top: 15vh;
   display: flex;
@@ -28,15 +26,25 @@ body {
 }
 
 .text-to-encrypt-container textarea {
+  font-family: "Inter", sans-serif;
   box-sizing: border-box;
   width: 100%;
   resize: none;
   background: transparent;
+  font-weight: bold;
   color: #0a3871;
   font-size: 1.5rem;
   height: 30vh;
   border: #0a3871 dotted;
   margin-bottom: 1rem;
+}
+
+.text-to-encrypt-container textarea::placeholder{
+  color: #0a3871;
+}
+
+textarea:focus{
+  outline: none;
 }
 
 .text-to-encrypt-container .buttons {
@@ -47,7 +55,6 @@ body {
 }
 
 .input-buttons-container small {
-
   font-size: 0.8rem;
   font-weight: bold;
   flex-direction: row;
@@ -94,4 +101,57 @@ button .text-button {
   width: 80%;
   color: #ffffff;
   font-weight: 600;
+}
+
+/*Seccion donde se muestra el mensaje encriptado*/
+
+.main-result-container {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-result-container img {
+  width: 100%;
+}
+
+.main-result-container h2 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.main-result-container .encrypt-initial-container {
+  background-color: #ffffff;
+  border: 0.2em solid #052051;
+  border-radius: 1.5rem;
+  height: 95vh;
+  width: 95%;
+  display: flex;
+  align-items: center;
+}
+
+.main-result-container .encrypt-initial-container .no-encrypted-message {
+  text-align: center;
+}
+
+.main-result-container .encrypt-initial-container .encrypted-message {
+  display: none;
+}
+
+.main-result-container .encrypt-initial-container .encrypted-message textarea {
+  width: 100%;
+  margin: 1rem, auto;
+  height: 100%;
+  font-weight: 200;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  resize: none;
+  background: transparent;
+  border: #052051 dotted;
+  padding: 1rem;
+}
+
+.copy-btn {
+  margin-bottom: 2.3rem;
 }
