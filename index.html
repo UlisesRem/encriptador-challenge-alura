@@ -29,36 +29,38 @@
 
           <div class="input-buttons-container">
             <small>
-              <img src="media/exclamation.svg">
-            Solo letras minúsculas y sin acento
+              <img src="media/exclamation.svg" />
+              Solo letras minúsculas y sin acento
             </small>
-            
+
             <div class="buttons">
               <button class="encrypt-btn">
                 <span for="encrypt-btn" class="text-button">Encriptar</span>
               </button>
               <button class="unencrypt-btn">
-                <span for="unencrypt-btn" class="text-button">Desencriptar</span>
+                <span for="unencrypt-btn" class="text-button"
+                  >Desencriptar</span
+                >
               </button>
             </div>
           </div>
         </div>
-
-          
-
-        
       </div>
 
-      <div class="encrypt-result-container">
-        <img src="media/no-message-img.svg" />
-
-        <textarea class="result"> </textarea>
-        <h2>Ningún mensaje fue encontrado</h2>
-        <p>Ingresa el texto que deseas encriptar o desencriptar</p>
-
-        <button class="copy-btn">
-          <label for="copy-btn">Copiar</label>
-        </button>
+      <div class="main-result-container">
+        <div class="encrypt-initial-container">
+          <div class="no-encrypted-message">
+            <img src="media/no-message-img.svg" />
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+          </div>
+          <div class="encrypted-message">
+            <textarea class="result"> </textarea>
+            <button class="copy-btn">
+              <span for="copy-btn" class="text-button">Copiar</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
