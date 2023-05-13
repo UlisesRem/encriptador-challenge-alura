@@ -1,31 +1,41 @@
-var textToString = document.querySelector(".add-message");
-var btnencrypt = document.querySelector(".encrypt-btn");
-var btnunencrypt = document.querySelector(".unencrypt-btn");
-var showresult = document.querySelector(".result");
-var btncopy = document.querySelector(".copy-btn");
+var messagecontainer = document.querySelector(".text-to-encrypt");
+var resultcontainer = document.querySelector(".result");
+var encryptbtn = document.querySelector(".encrypt-btn");
+var unencryptbtn = document.querySelector(".unencrypt-btn");
+var copybtn = document.querySelector(".copy-btn");
 
+//Encriptacion del mensaje
+function encryptMessage(inputmessage) {
+    const newletters = {
+      "e": "enter",
+      "i": "imes",
+      "a": "ai",
+      "o": "ober",
+      "u": "ufat"
+    };
+    
+    let newmessage = inputmessage;
+    for (let encrypted in newletters) {
+      const expresionRegular = new RegExp(encrypted, "g");
+      newmessage = newmessage.replace(expresionRegular, newletters[encrypted]);
+    }
+    return newmessage;
+  }
 
-//Hacemos la encriptacion del texto ingresado
-function encryptText(message) {
-  let textToEncrypt = message
-    .replaceAll("a", "ai")
-    .replaceAll("e", "enter")
-    .replaceAll("i", "imes")
-    .replaceAll("o", "ober")
-    .replaceAll("u", "ufat");
-
-  return textToEncrypt;
-}
-
-//Hacemos la desencriptacion del texto generado
-function unencryptText(message) {
-  let textToEncrypt = message
-    .replaceAll("ai", "a")
-    .replaceAll("enter", "e")
-    .replaceAll("imes", "i")
-    .replaceAll("ober", "o")
-    .replaceAll("ufal", "u");
-
-  return textToEncrypt;
-}
-
+  //Desencriptacion del mensaje
+function unencryptMessage(message) {
+    const newletters = {
+      "enter": "e",
+      "imes": "i",
+      "ai": "a",
+      "ober": "o",
+      "ufat": "u"
+    };
+    
+    let newmessage = message;
+    for (let encrypted in newletters) {
+      const expresionRegular = new RegExp(encrypted, "g");
+      newmessage = newmessage.replace(expresionRegular, newletters[encrypted]);
+    }
+    return newmessage;
+  }
