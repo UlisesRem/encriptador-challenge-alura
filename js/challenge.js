@@ -19,16 +19,24 @@ function encryptMessage(inputmessage) {
   };
 
   if (correctletters(messagecontainer.value)) {
-    let encriptedMessage = messagecontainer.value.replace(/[aeiou]/g, n => newletters[n]);
+    let encriptedMessage = messagecontainer.value.replace(
+      /[aeiou]/g,
+      (n) => newletters[n]
+    );
     document.querySelector(".no-encrypted-message").style.display = "none";
     document.querySelector(".encrypted-message").style.display = "block";
     resultcontainer.textContent = encriptedMessage;
-    }
+  } else {
+    alert("Solo se admite letras minusculas sin acentos");
   }
+  document.querySelector(".copy-btn").style.display = "none";
+}
+
 encryptbtn.addEventListener("click", encryptMessage);
 
 //Desencriptacion del mensaje
-function unencryptMessage(message) {
+
+function unEncryptMessage(inputmessage) {
   const newletters = {
     enter: "e",
     imes: "i",
@@ -37,13 +45,21 @@ function unencryptMessage(message) {
     ufat: "u",
   };
 
-  let newmessage = message;
-  for (let encrypted in newletters) {
-    const expresionRegular = new RegExp(encrypted, "g");
-    newmessage = newmessage.replace(expresionRegular, newletters[encrypted]);
+  if (correctletters(messagecontainer.value)) {
+    let encriptedMessage = messagecontainer.value.replace(
+      /enter|imes|ai|ober|ufat/g,
+      (n) => newletters[n]
+    );
+    document.querySelector(".no-encrypted-message").style.display = "none";
+    document.querySelector(".encrypted-message").style.display = "block";
+    resultcontainer.textContent = encriptedMessage;
+  } else {
+    alert("Solo se admite letras minusculas sin acentos");
   }
-  return newmessage;
+  document.querySelector(".copy-btn").style.display = "none";
 }
+
+unencryptbtn.addEventListener("click", unEncryptMessage);
 
 /* TEST BOTONES 
 encryptbtn.addEventListener("click", borrarimage);
