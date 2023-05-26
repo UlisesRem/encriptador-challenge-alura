@@ -61,7 +61,7 @@ function unEncryptMessage() {
 
 unencryptbtn.addEventListener("click", unEncryptMessage);
 
-//Funcion copiar
+/*Funcion copiar
 function copyMe() {
   let copyMessage = resultcontainer.value;
   navigator.clipboard.writeText(copyMessage);
@@ -69,4 +69,13 @@ function copyMe() {
   alert("Copiado");
   messagecontainer.value = "";
 }
-copybtn.addEventListener("click", copyMe);
+copybtn.addEventListener("copy", copyMe);
+
+*/
+
+copybtn.addEventListener("click", function(){
+  let copiedText = resultcontainer.value;
+  navigator.clipboard.writeText(copiedText);
+  window.alert("Texto copiado");
+  messagecontainer.value = "";
+});
