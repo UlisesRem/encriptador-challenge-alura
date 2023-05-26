@@ -166,6 +166,44 @@ button .text-button {
   margin-bottom: 2.3rem;
 }
 
+@media screen and (max-width: 768px) {
+  .principal-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    padding-top: 15px;
+  }
+
+  .encrypt-container {
+    padding-top: 8vh;
+    width: 80vw;
+  }
+
+  .text-to-encrypt-container {
+    width: 90%;
+  }
+
+  .text-to-encrypt-container textarea {
+    height: 20vh;
+  }
+
+  .main-result-container {
+    width: 80vw;
+    margin-top: 2rem;
+  }
+
+  .main-result-container .encrypt-initial-container {
+    height: 65vh;
+  }
+
+  .main-result-container .encrypt-initial-container .encrypted-message textarea {
+    width: 90%;
+    height: 50%;
+  }
+}
+
 /* Responsive*/
 /* Para dispositivos móviles */
 @media (max-width: 768px) {
@@ -239,6 +277,7 @@ button .text-button {
   }
 
   .main-result-container .encrypt-initial-container {
+    display: grid;
     height: 50vh;
     width: 90%;
     border-radius: 1rem;
@@ -268,58 +307,6 @@ button .text-button {
 }
 
 /* Para tablets */
-
-/* For screens with a maximum width of 768px (tablet screens) */
-@media only screen and (max-width: 768px) {
-  .principal-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .logo-container {
-    width: 100%;
-    padding-top: 10px;
-    text-align: center;
-  }
-  
-  .encrypt-container {
-    width: 100%;
-    padding-top: 10vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .encrypt-container .text-to-encrypt-container {
-    width: 90%;
-  }
-  
-  .text-to-encrypt-container textarea {
-    font-size: 1.2rem;
-    height: 20vh;
-  }
-  
-  .main-result-container {
-    width: 90%;
-    margin-top: 2rem;
-  }
-  
-  .main-result-container h2 {
-    font-size: 1.5rem;
-  }
-  
-  .main-result-container .encrypt-initial-container {
-    height: 40vh;
-  }
-  
-  .main-result-container .encrypt-initial-container .encrypted-message textarea {
-    font-size: 1.2rem;
-  }
-  
-  .copy-btn {
-    margin-bottom: 1rem;
-  }
-}
 
 
 /* Posicion horizontal*/
@@ -354,12 +341,27 @@ button .text-button {
   }
   
   .main-result-container {
+    
+    align-items: center;
+    text-align: center;
     width: 90%;
     margin-top: 2rem;
   }
   
   .main-result-container h2 {
+
     font-size: 1.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .defaultText{
+    display: block;
+    text-align: ce;
+  }
+
+  .main-result-container img {
+    display: none;
   }
   
   .main-result-container .encrypt-initial-container {
