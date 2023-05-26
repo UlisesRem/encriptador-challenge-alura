@@ -4,12 +4,13 @@ var encryptbtn = document.querySelector(".encrypt-btn");
 var unencryptbtn = document.querySelector(".unencrypt-btn");
 var copybtn = document.querySelector(".copy-btn");
 
+//Validamos que solo ingresen caracteres especificados
 function correctletters(input) {
   return /^[a-z0-9/ /ñ:;,.¿?¡!]+$/.test(input);
 }
 
 //Encriptacion del mensaje
-function encryptMessage(inputmessage) {
+function encryptMessage() {
   const newletters = {
     e: "enter",
     i: "imes",
@@ -29,14 +30,13 @@ function encryptMessage(inputmessage) {
   } else {
     alert("Solo se admite letras minusculas sin acentos");
   }
-  document.querySelector(".copy-btn").style.display = "none";
+  document.querySelector(".copy-btn").style.display = "block";
 }
 
 encryptbtn.addEventListener("click", encryptMessage);
 
 //Desencriptacion del mensaje
-
-function unEncryptMessage(inputmessage) {
+function unEncryptMessage() {
   const newletters = {
     enter: "e",
     imes: "i",
@@ -56,29 +56,17 @@ function unEncryptMessage(inputmessage) {
   } else {
     alert("Solo se admite letras minusculas sin acentos");
   }
-  document.querySelector(".copy-btn").style.display = "none";
+  document.querySelector(".copy-btn").style.display = "block";
 }
 
 unencryptbtn.addEventListener("click", unEncryptMessage);
 
-/* TEST BOTONES 
-encryptbtn.addEventListener("click", borrarimage);
-unencryptbtn.addEventListener("click", volverxd);
-function borrarimage(){
-  let imagedefault = document.querySelector(".no-encrypted-message");
-
-  imagedefault.style.display = "none";
+//Funcion copiar
+function copyMe() {
+  let copyMessage = resultcontainer.value;
+  navigator.clipboard.writeText(copyMessage);
+  document.querySelector(".copy-btn").style.display = "block";
+  alert("Copiado");
+  messagecontainer.value = "";
 }
-
-function volverxd(){
-  let imagedefault = document.querySelector(".no-encrypted-message");
-
-  imagedefault.style.display = "block";
-}
-
-
-function hola(){
-  alert("Hola xd")
-}
-
-*/
+copybtn.addEventListener("click", copyMe);
