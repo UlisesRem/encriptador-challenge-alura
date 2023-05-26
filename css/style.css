@@ -39,11 +39,11 @@ body {
   margin-bottom: 1rem;
 }
 
-.text-to-encrypt-container textarea::placeholder{
+.text-to-encrypt-container textarea::placeholder {
   color: #0a3871;
 }
 
-textarea:focus{
+textarea:focus {
   outline: none;
 }
 
@@ -136,12 +136,12 @@ button .text-button {
 }
 
 .main-result-container .encrypt-initial-container .encrypted-message {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    display: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
 }
 
 .main-result-container .encrypt-initial-container .encrypted-message textarea {
@@ -160,54 +160,38 @@ button .text-button {
   align-items: flex-start; /* Modificado para alinear al inicio del div */
   justify-content: center;
   overflow: auto;
+  padding-bottom: 20px;
 }
 
 .copy-btn {
   margin-bottom: 2.3rem;
 }
 
-@media screen and (max-width: 768px) {
-  .principal-container {
-    flex-direction: column;
-    align-items: center;
-  }
+/* FOOTER*/
+footer {
+  padding-top: 10vh;
+  height: 4%;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #0a3871;
+}
 
-  .logo-container {
-    padding-top: 15px;
-  }
+footer p {
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+}
 
-  .encrypt-container {
-    padding-top: 8vh;
-    width: 80vw;
-  }
-
-  .text-to-encrypt-container {
-    width: 90%;
-  }
-
-  .text-to-encrypt-container textarea {
-    height: 20vh;
-  }
-
-  .main-result-container {
-    width: 80vw;
-    margin-top: 2rem;
-  }
-
-  .main-result-container .encrypt-initial-container {
-    height: 65vh;
-  }
-
-  .main-result-container .encrypt-initial-container .encrypted-message textarea {
-    width: 90%;
-    height: 50%;
-  }
+footer a {
+  margin-left: 10px;
+  color: #ffffff;
 }
 
 /* Responsive*/
 /* Para dispositivos móviles */
 @media (max-width: 768px) {
-
   .principal-container {
     flex-direction: column;
   }
@@ -269,6 +253,7 @@ button .text-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
   }
 
   .main-result-container h2 {
@@ -286,7 +271,7 @@ button .text-button {
   .main-result-container .encrypt-initial-container .no-encrypted-message {
     font-size: 0.8rem;
   }
-  .no-encrypted-message img{
+  .no-encrypted-message img {
     width: 60%;
   }
 
@@ -294,7 +279,10 @@ button .text-button {
     display: none;
   }
 
-  .main-result-container .encrypt-initial-container .encrypted-message textarea {
+  .main-result-container
+    .encrypt-initial-container
+    .encrypted-message
+    textarea {
     font-size: 1rem;
     margin: 0.5rem, auto;
     height: 80%;
@@ -304,10 +292,28 @@ button .text-button {
   .copy-btn {
     margin-bottom: 1.5rem;
   }
+
+  @media screen and (max-width: 768px) {
+    footer {
+      padding-top: 5vh;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      margin: 5px;
+    }
+  }
 }
 
 /* Para tablets */
-
 
 /* Posicion horizontal*/
 /* For screens with a maximum width of 768px (tablet screens) */
@@ -316,13 +322,13 @@ button .text-button {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .logo-container {
     width: 100%;
     padding-top: 10px;
     text-align: center;
   }
-  
+
   .encrypt-container {
     width: 100%;
     padding-top: 10vh;
@@ -330,32 +336,30 @@ button .text-button {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .encrypt-container .text-to-encrypt-container {
     width: 90%;
   }
-  
+
   .text-to-encrypt-container textarea {
     font-size: 1.2rem;
     height: 20vh;
   }
-  
+
   .main-result-container {
-    
     align-items: center;
     text-align: center;
     width: 90%;
     margin-top: 2rem;
   }
-  
-  .main-result-container h2 {
 
+  .main-result-container h2 {
     font-size: 1.5rem;
     text-align: center;
     align-items: center;
   }
 
-  .defaultText{
+  .defaultText {
     display: block;
     text-align: ce;
   }
@@ -363,19 +367,22 @@ button .text-button {
   .main-result-container img {
     display: none;
   }
-  
+
   .main-result-container .encrypt-initial-container {
     height: 40vh;
   }
 
-  .no-encrypted-message{
+  .no-encrypted-message {
     text-align: center;
   }
-  
-  .main-result-container .encrypt-initial-container .encrypted-message textarea {
+
+  .main-result-container
+    .encrypt-initial-container
+    .encrypted-message
+    textarea {
     font-size: 1.2rem;
   }
-  
+
   .copy-btn {
     margin-bottom: 1rem;
   }
