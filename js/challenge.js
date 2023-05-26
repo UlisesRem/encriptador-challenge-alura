@@ -74,8 +74,7 @@ copybtn.addEventListener("copy", copyMe);
 */
 
 copybtn.addEventListener("click", function(){
-  let copiedText = resultcontainer.value;
-  navigator.clipboard.writeText(copiedText);
+  navigator.clipboard.writeText(resultcontainer.value);
   window.alert("Texto copiado");
-  messagecontainer.value = "";
+  messagecontainer.select();
 });
